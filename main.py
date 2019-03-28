@@ -49,9 +49,8 @@ if __name__ == "__main__":
     print("Weights After Training:")
     print(ann.synaptic_weights)
 
-    input = np.array([1, 0, 1, 0])
-    print("Think about the answer:", input)
-
+    input = np.array([0, 0, 1, 0])
     output = ann.think(input)  # e.g. 0.9989834
+
     result = decimal.Decimal(output[0]).quantize(decimal.Decimal('1'), rounding=decimal.ROUND_HALF_UP)
     print("The answer for {} is: {}".format(input, result))
